@@ -1,0 +1,12 @@
+===================================CUSTOMERS============================================================
+   ID         Name        Surname                     DateOfBirth                     Age 
+=========================================================================================================
+    C100      Mike           Rohsopht         	Sun Jan 24 00:00:00 SAST 1993         40
+    C130      Stu           Padassol         	Mon May 18 00:00:00 SAST 1987         34
+    C150      Luke           Atmyass        	Tue Jan 27 00:00:00 SAST 1981         28
+    C250      Eileen        Sideways         	Sat Nov 27 00:00:00 SAST 1999         20
+    C260      Ima           Stewpidas       	Sat Jan 27 00:00:00 SAST 2001         20
+    C300      Ivana.B        Withew         	Thu Jul 16 00:00:00 SAST 1998         21
+
+Number of Customers who can Rent:4
+Number of Customers who cannot Rent:2

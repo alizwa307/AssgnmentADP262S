@@ -183,27 +183,7 @@ String sDate10 = ct10.getDateOfBirth();
  
 
 
-             
-
-    
-//Customer Array Sorting
-          String str0 ="    " +ct0.getStHolderId()+"      "+ ct0.getFirstName()+"           "+ct0.getSurName()+"        "+"\t"+date1+"\n"+"    "  ;
-	  String str2 = "    "+ct2.getStHolderId()+"      "+ ct2.getFirstName()+"           "+ct2.getSurName()+"         "+"\t"+date2+"\n";
-	  String str5 = "    "+ct5.getStHolderId()+"      "+ ct5.getFirstName()+"           "+ct5.getSurName()+"         "+"\t"+date3+"\n";
-	  String str6 = "    "+ct6.getStHolderId()+"      "+ ct6.getFirstName()+"        "+ct6.getSurName()+"         "+"\t"+date4+"\n";
-	 String str9 =""+ ct9.getStHolderId()+"      "+ ct9.getFirstName()+"        "+ct9.getSurName()+"         "+"\t"+date5+"\n";
-        String str10 ="    "+ct10.getStHolderId()+"      "+ct10.getFirstName()+"           "+ct10.getSurName()+"       "+"\t"+date6+"\n";
-String []customer ={str5,str2,str0,str9,str10,str6};	  
-
-
-
-String s = new String(customer[0]);
-String s1 = new String(customer[1]);
-String s2 = new String(customer[2]);
-String s3 = new String(customer[3]);
-String s4 = new String(customer[4]);
-String s5 = new String(customer[5]);
-/////////////////Calculateing Age
+     /////////////////Calculateing Age
 LocalDate l0 = LocalDate.parse((CharSequence) sDate0);
 LocalDate l1 = LocalDate.parse((CharSequence) sDate2);
 LocalDate l2 = LocalDate.parse((CharSequence) sDate5);
@@ -225,7 +205,28 @@ Period Age6 = Period.between(l5, now);
     int s8 = Age3.getYears();
      int s9 = Age4.getYears();
       int s10 = Age5.getYears();
-       int s11= Age6.getYears();
+       int s11= Age6.getYears();        
+
+    
+//Customer Array Sorting
+          String str0 ="    " +ct0.getStHolderId()+"      "+ ct0.getFirstName()+"           "+ct0.getSurName()+"        "+"\t"+date1+"         "+s8+"\n"  ;
+	  String str2 = "    "+ct2.getStHolderId()+"      "+ ct2.getFirstName()+"           "+ct2.getSurName()+"         "+"\t"+date2+"         "+s7+"\n";
+	  String str5 = "    "+ct5.getStHolderId()+"      "+ ct5.getFirstName()+"           "+ct5.getSurName()+"         "+"\t"+date3+"         "+s6+"\n";
+	  String str6 = "    "+ct6.getStHolderId()+"      "+ ct6.getFirstName()+"        "+ct6.getSurName()+"         "+"\t"+date4+"         "+s10+"\n";
+	 String str9 ="    "+ ct9.getStHolderId()+"      "+ ct9.getFirstName()+"        "+ct9.getSurName()+"         "+"\t"+date5+"         "+s11+"\n";
+        String str10 ="    "+ct10.getStHolderId()+"      "+ct10.getFirstName()+"           "+ct10.getSurName()+"       "+"\t"+date6+"         "+s11+"\n";
+String []customer ={str5,str2,str0,str9,str10,str6};	  
+
+
+
+String s = new String(customer[0]);
+String s1 = new String(customer[1]);
+String s2 = new String(customer[2]);
+String s3 = new String(customer[3]);
+String s4 = new String(customer[4]);
+String s5 = new String(customer[5]);
+/////////////////Calculateing Age
+
        
        
 
@@ -233,7 +234,7 @@ try
 {
 bf = new BufferedWriter( new FileWriter("Customer.txt"));
 bf.write("===================================CUSTOMERS============================================================\n");
-bf.write("      ID         Name        Surname                     DateOfBirth                    Age \n");
+bf.write("   ID         Name        Surname                     DateOfBirth                     Age \n");
 bf.write("=========================================================================================================\n");
 //bf.write();//s8
 bf.write(String.format(s, customer));//s8
